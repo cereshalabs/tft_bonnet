@@ -5,6 +5,10 @@ from PIL import Image, ImageDraw, ImageFont
 from adafruit_rgb_display import st7789
 import adafruit_hdc302x
 
+# Font size
+FONTSIZE = 30
+
+
 # Initialize HDC302x sensor
 try:
     i2c = board.I2C()
@@ -34,27 +38,6 @@ disp = st7789.ST7789(
     baudrate=BAUDRATE,
 )
 
-# Input pins:
-button_A = DigitalInOut(board.D5)
-button_A.direction = Direction.INPUT
-
-button_B = DigitalInOut(board.D6)
-button_B.direction = Direction.INPUT
-
-button_L = DigitalInOut(board.D27)
-button_L.direction = Direction.INPUT
-
-button_R = DigitalInOut(board.D23)
-button_R.direction = Direction.INPUT
-
-button_U = DigitalInOut(board.D17)
-button_U.direction = Direction.INPUT
-
-button_D = DigitalInOut(board.D22)
-button_D.direction = Direction.INPUT
-
-button_C = DigitalInOut(board.D4)
-button_C.direction = Direction.INPUT
 
 # Turn on the Backlight
 backlight = DigitalInOut(board.D26)
@@ -74,7 +57,9 @@ draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
 disp.image(image)
 
 # Load font
-fnt = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 30)
+# fnt = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 30)
+fnt = ImageFont.truetype("/usr/share/fonts/truetype/piboto/Piboto-Bold.ttf", FONTSIZE)
+
 
 while True:
     # Read temperature and humidity from the sensor
@@ -96,10 +81,6 @@ while True:
     else:
         draw.text((10, 90), "Sensor Error", font=fnt, fill=(255, 0, 0))
 
-    # Display button state (for debugging if needed)
-    # Example: Display button U state
-    if not button_U.value:
-        print("Up button pressed")
 
     # Display the image
     disp.image(image)
