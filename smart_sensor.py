@@ -105,9 +105,9 @@ while True:
 
     # Display temperature and humidity
     if temp_celcius is not None and humidity is not None:
-        draw.text((10, 10), f"T: {temp_celcius:.1f}C", font=large_font, fill=(255, 69, 0))
-        draw.text((10, 60), f"F: {temp_fahrenheit:.1f}F", font=large_font, fill=(255, 69, 0))
-        draw.text((10, 110), f"H: {humidity:.1f}%", font=large_font, fill=(30, 144, 255))
+        draw.text((10, 10),  f"Temp: {temp_celcius:.1f}C", font=medium_font, fill=(255, 69, 0))
+        draw.text((10, 60),  f"Temp: {temp_fahrenheit:.1f}F", font=medium_font, fill=(255, 69, 0))
+        draw.text((10, 110), f"Humi: {humidity:.1f}%", font=medium_font, fill=(30, 144, 255))
     else:
         draw.text((10, 60), "Sensor Error", font=large_font, fill=(255, 0, 0))
 
