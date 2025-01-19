@@ -23,7 +23,7 @@ This project is a blend of:
 ## **Features**
 - Real-time display of temperature and humidity on a 240x240 TFT screen.
 - Button controls for interacting with the device.
-- Sends data to an Azure IoT Hub for remote monitoring and IoT integration.
+- Sends data to a cloud IoT Hub for remote monitoring and IoT integration.
 - Service integration for automatic startup and monitoring.
 
 ---
