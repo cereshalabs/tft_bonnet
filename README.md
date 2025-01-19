@@ -1,9 +1,22 @@
 # **tft_bonnet**
 
 ## **Overview**
-`tft_bonnet` is a Python-based project for a **Smart Thermostat**. The goal is to create a mobile thermometer that displays the current temperature and humidity on a built-in screen and sends this data to an Azure IoT Hub.
+`tft_bonnet` is a showcase project that highlights my expertise in **Data Engineering**, **DevOps**, **Mechanical Engineering**, and **Electrical Engineering**. 
 
-This project is designed for use with Raspberry Pi and an ST7789VW-based display.
+The goal of this project is to demonstrate my ability to design and implement a fully functional **Smart Thermostat**, capable of:
+- Measuring and displaying real-time temperature and humidity.
+- Integrating with Azure IoT Hub for data analysis and visualization.
+- Automating deployments and services through DevOps principles.
+
+---
+
+## **Why This Project?**
+
+This project is a blend of:
+- **DevOps**: Automating deployments with Systemd services and CI/CD pipelines.
+- **Data Engineering**: Integrating with Azure IoT Hub to enable data collection and real-time monitoring.
+- **Mechanical Engineering**: Leveraging sensor technology for practical environmental monitoring.
+- **Electrical Engineering**: Interfacing hardware like sensors and displays with Raspberry Pi.
 
 ---
 
