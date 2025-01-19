@@ -18,7 +18,7 @@ This project is designed for use with Raspberry Pi and an ST7789VW-based display
 ## **Project Structure**
 ```plaintext
 tft_bonnet/
-├── docs/                 # Project documentation
+├── docs/                 # Placeholder for future project documentation
 │   └── Documentation.md  # Instructions and additional details
 ├── services/             # Systemd and deployment scripts
 │   ├── deploy_custom_service.sh  # Script to deploy the service
