@@ -1,0 +1,19 @@
+[Unit]
+Description=Smart Sensor Script
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment="PROJECT_DIR=/home/pi/projects/tft_bonnet"
+ExecStart=/bin/bash -c 'source $PROJECT_DIR/env/bin/activate && python $PROJECT_DIR/smart_sensor.py'
+WorkingDirectory=/home/pi/projects/tft_bonnet
+User=pi
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
