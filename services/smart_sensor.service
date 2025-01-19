@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 Environment="PROJECT_DIR=/home/pi/projects/tft_bonnet"
-ExecStart=/bin/bash -c 'source $PROJECT_DIR/env/bin/activate && python $PROJECT_DIR/smart_sensor.py'
+ExecStart=/bin/bash -c 'source $PROJECT_DIR/env/bin/activate && python $PROJECT_DIR/src/smart_sensor.py'
 WorkingDirectory=/home/pi/projects/tft_bonnet
 User=pi
 Restart=always

@@ -2,7 +2,7 @@
 
 # Define variables
 SERVICE_NAME="smart_sensor.service"
-SOURCE_DIR="/home/pi/projects/tft_bonnet"
+SOURCE_DIR="/home/pi/projects/tft_bonnet/services"
 DEST_DIR="/etc/systemd/system"
 
 # Check if the service file exists in the source directory
