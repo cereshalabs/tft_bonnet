@@ -111,17 +111,17 @@ while True:
     else:
         draw.text((10, 60), "Sensor Error", font=large_font, fill=(255, 0, 0))
 
+    # Draw separator line
+    draw.line((0, 200, width, 200), fill=(255, 255, 255), width=2)
+
     # Display WiFi status
     wifi_color = (0, 255, 0) if wifi_status else (255, 0, 0)  # Green for On, Red for Off
-    draw.text((10, 180), wifi_status, font=small_font, fill=wifi_color)
+    draw.text((10, 210), wifi_status, font=small_font, fill=wifi_color)
 
     #  Display Time
-    draw.text((width - 100, 180), current_time, font=small_font, fill=(255, 255, 255))
+    draw.text((width - 100, 210), current_time, font=small_font, fill=(255, 255, 255))
 
-    # Separator line
-    draw.line((0, 170, width, 170), fill=(255, 255, 255), width=2)
-
-    # Display the image
+    # Display the final image
     disp.image(image)
 
     time.sleep(1)
